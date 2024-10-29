@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>VideoChat</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body class="w-screen h-screen px-16 py-5 bg-zinc-900">
+     <div>
+          <h1 class="font-mono italic text-white text-xl">Video Chat</h1>
+     </div>
+
+     <div>
+          <video id="remoteVideo" class="w-full h-[75vh] mt-5 bg-zinc-800 rounded-md" autoplay playsinline></video>
+          <video id="localVideo" class="w-52 h-36 absolute bottom-[15vh] right-16 bg-black rounded-md" autoplay muted playsinline></video>
+     </div>
+
+     <div class=" w-full controls flex justify-center gap-10 mt-3">
+          <div class="end w-10 h-10 p-2 rounded-full bg-red-500"><i class="ri-phone-fill text-xl"></i></div>
+     </div>
+     <!-- <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" 
+          integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" 
+          crossorigin="anonymous"> 
+     </script> -->
+     <script src="/socket.io/socket.io.js"></script>
+     <script src="/public/script/video_script.js"></script>
+</body>
+</html>
+
